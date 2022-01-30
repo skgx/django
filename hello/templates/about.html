@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
+{% load static%}
 <head>
-{% load static %}
-<link rel="stylesheet" href="{% static 'about.css">
+
+<link rel="stylesheet" href="{% static 'about.css' % }" type="text/css">
 </head>
 {% block body%}
 
-<div class="py-4">
-<header class='masthead'>
+<div class="p-4">
+<header class='masthead py-4'>
     <p class='masthead-intro'>Hi I'm</p>
     <h1 class='masthead-heading'>Nikov!</h1>
   </header>
