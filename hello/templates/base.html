@@ -33,16 +33,16 @@
     <title> {% block title %}{% endblock title %} Saurabh's,resume!</title>
   </head>
   <body>
-    <nav class="navbar navbar-default fixed-top  navbar-dark bg-dark py-0">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Saurabh</a>
+    <nav class="navbar navbar-default fixed-top  navbar-dark bg-dark ">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="/">Hi! I am Saurabh Gupta</a>
           <button class="navbar-toggler py-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active"  href="/"aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/about">About Me</a>
@@ -61,16 +61,28 @@
                     <a class="nav-link" href="/contact">Contact Me</a>
                   </li>
             </ul>
-            <!-- <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
           </div>
         </div>
       </nav>
-    {% block body %}
+     
+     <!-- <ul class="messages">
     
-    {% endblock body %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+   
+     </ul> -->
+
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade conatiner-fluid show py-3  my-3" role="alert">
+        {{ message.tags }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% block body %} {% endblock body %}
+   
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
