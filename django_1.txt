@@ -1,0 +1,32 @@
+Django is a free and open source web application framework written in python.
+
+1.) django helps in splitting of a website into different apps using the urls.py page.
+  eg: a website has a home page app, a admin page app, a about page app, etc.
+
+2.) APP Vs PROJECT
+   What’s the difference between a project and an app? An app is a web application that
+    does something –
+   e.g., a blog system, a database of public records or a small poll app. A project is
+    a collection of configuration 
+   and apps for a particular website.
+   A project can contain multiple apps. An app can be in multiple projects
+   
+3.) In settings.py file installed apps are mentioned.
+   Also, note the INSTALLED_APPS setting at the top of the file. That holds the names 
+   of all Django applications that are
+   activated in this Django instance.Apps can be used in multiple projects, and you can
+    package and distribute them for
+   use by others in their projects.
+   
+    These applications are included by default as a convenience for the common case.
+
+    of these applications make use of at least one database table, though, so we need 
+	to create the tables in the database before we can use them. To do that, run the 
+   following command:
+           $ python manage.py migrate
+		   
+    The migrate command looks at the INSTALLED_APPS setting and creates any necessary 
+    database tables according 
+	to the database settings in your mysite/settings.py file and the database migrations
+    shipped with the app.
+	

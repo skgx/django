@@ -1,0 +1,60 @@
+STEPS TO CREATE A DJANGO PROJECT
+
+1.) create a folder with project name
+2.) go into that folder using cd folder_name
+3.) create a virtual environment :
+	$ python -m venv environment_name
+	
+4.)Go into the created environment_name by activating the environment:
+	$ environment_name\Scripts\activate
+	
+5.)Install django and other packages into it
+
+
+	example:
+	
+	λ cd users\saura\documents\django_learn
+
+    λ env\Scripts\activate
+
+    (env) λ pip install django
+	
+6.) create a django app using:
+	$django-admin startproject project_name
+	
+#A django app named "project_name" is created in the "folder_name" and we can open it up in any code editor
+	
+7.) To run the app created:
+	cd project_name
+	$python manage.py runserver
+	By default, the runserver command starts the development server on the internal 
+	IP at port 8000.
+	If you want to change the server’s port, pass it as a command-line argument. 
+	For instance, this command starts the server on port 8080:
+    $ python manage.py runserver 8080
+	
+	The development server automatically reloads Python code for each request as needed.
+	You don’t need to restart the server for code changes to take effect. However, 
+	some actions like adding files don’t trigger a restart, 
+	so you’ll have to restart the server in these cases
+
+
+8.) to exit runserver command press ctrl+C
+
+9.) to exit the virtual environment type-  "deactivate" 
+
+
+10.) to check django version inside virtual environment use :
+		$python -m django --version
+		
+11.)Structure of pre-created django apps
+	mysite/				    =>root directory is a container for your project.
+							  Its name doesn’t matter to Django; you can rename it to anything you like.
+       manage.py			=> A command-line utility that lets you interact with this Django project in various ways.
+       mysite/				=>directory is the actual Python package for your project. 
+							  Its name is the Python package name you’ll need to use to import anything inside it (e.g. mysite.urls).
+          __init__.py       =>An empty file that tells Python that this directory should be considered a Python package. 
+          settings.py		=>Settings/configuration for this Django project.
+          urls.py			=>The URL declarations for this Django project; a “table of contents” of your Django-powered site. 
+          asgi.py			=>An entry-point for ASGI-compatible web servers to serve your project
+          wsgi.py			=>An entry-point for WSGI-compatible web servers to serve your project.
