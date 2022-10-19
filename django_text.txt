@@ -18,6 +18,8 @@ STEPS TO CREATE A DJANGO PROJECT
     λ env\Scripts\activate
 
     (env) λ pip install django
+    
+#to update pre installed django-->  $ python -m pip install -U Django
 	
 6.) create a django app using:
 	$django-admin startproject project_name
