@@ -45,11 +45,20 @@ STEPS TO CREATE A DJANGO PROJECT
 
 9.) to exit the virtual environment type-  "deactivate" 
 
+10.) To migrate the changes that django needs i.e. the tables creation run:
+                $python manage.py migrate
+		
+11.) To create an app inside the project:
+                $python manage.py startapp app_name
 
-10.) to check django version inside virtual environment use :
+
+12.) To create a superuser for the django admin
+                $python manage.py createsuperuser
+
+13.) to check django version inside virtual environment use :
 		$python -m django --version
 		
-11.)Structure of pre-created django apps
+14.)Structure of pre-created django apps
 	mysite/		       =>root directory is a container for your project.
 			         Its name doesn’t matter to Django; you can rename it to anything you like.
           manage.py	       =>A command-line utility that lets you interact with this Django project in various ways.
